@@ -1,8 +1,8 @@
 name: meadow
 description: A new flutter package project.
 version: 0.0.1
-author:
-homepage:
+author: Samuel Freeman
+homepage: https://github.com/Sam-Freeman/Meadow
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
