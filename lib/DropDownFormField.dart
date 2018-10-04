@@ -1,22 +1,31 @@
 import 'package:flutter/material.dart';
 
-class DropDownFormField extends FormField<String> {
+/// Creates a drop down field that can be easily used within a form
+/// 
+/// [dropDownItems] : Drop down options
+/// [fieldTitle] : Form label title, displayed inline with border
+/// [prefixIcon] : Icon displayed within form field bounds
+/// [icon] : Icon Displayed before inline with the form field, outside of bounds
+/// [onSaved] : Returns a string value when form is saved
+/// [validator] : Validator used for validating input
+/// [initialValue] : Starting value, must be included in drop down items
+/// [autovalidate] : Whether the input should be validated after any change
+class DropDownFormField<T> extends FormField<T> {
         DropDownFormField({
-        @required List<String> dropDownItems,
+        @required List<T> dropDownValues,
         String fieldTitle,
         Icon prefixIcon,
         Icon icon,
-        FormFieldSetter<String> onSaved,
-        FormFieldValidator<String> validator,
+        FormFieldSetter<T> onSaved,
+        FormFieldValidator<T> validator,
         String initialValue = "",
         bool autovalidate = false,
-
     }) : super(
         onSaved : onSaved,
         validator : validator,
-        initialValue : initialValue,
+        initialValue : dropDownValues[0],
         autovalidate : autovalidate,
-        builder : (FormFieldState<String> state) {
+        builder : (FormFieldState<T> state) {
             return InputDecorator(
                 decoration: InputDecoration(
                     isDense: true,
@@ -33,9 +42,9 @@ class DropDownFormField extends FormField<String> {
                         value: state.value,
                         isDense: true,
                         onChanged: (newValue) => state.didChange(newValue),
-                        items: dropDownItems.map((value) => DropdownMenuItem(
+                        items: dropDownValues.map((value) => DropdownMenuItem(
                             value: value,
-                            child: Text(value)
+                            child: Text(value.toString())
                         )).toList()
                     )
                 )
