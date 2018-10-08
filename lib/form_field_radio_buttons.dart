@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class RadioButtonsFormField<T> extends FormField<T> {
     /// Creates a row of Radio Buttons, where one can be selected
     /// 
