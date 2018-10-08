@@ -16,7 +16,7 @@ For help on editing package code, view the [documentation](https://flutter.io/de
 
 ## Example
 
-An example form can be found in this package in the class "Example.dart"
+An example form can be found in this package in the class "example.dart"
 
 ![](https://imgur.com/a/9miJ93a)
 
