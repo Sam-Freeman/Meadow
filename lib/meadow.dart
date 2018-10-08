@@ -5,3 +5,6 @@ library meadow;
 export 'DropDownFormField.dart';
 export 'DatePickerFormField.dart';
 export 'ButtonRowFormField.dart';
+export 'CheckBoxFormField.dart';
+export 'SwitchFormField.dart';
+export 'RadioButtonsFormField.dart';  

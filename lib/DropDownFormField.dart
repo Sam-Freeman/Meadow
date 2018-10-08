@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
-/// Creates a drop down field that can be easily used within a form
-/// 
-/// [dropDownItems] : Drop down options
-/// [fieldTitle] : Form label title, displayed inline with border
-/// [prefixIcon] : Icon displayed within form field bounds
-/// [icon] : Icon Displayed before inline with the form field, outside of bounds
-/// [onSaved] : Returns a string value when form is saved
-/// [validator] : Validator used for validating input
-/// [initialValue] : Starting value, must be included in drop down items
-/// [autovalidate] : Whether the input should be validated after any change
 class DropDownFormField<T> extends FormField<T> {
-        DropDownFormField({
+    /// Creates a drop down field that can be easily used within a form
+    /// 
+    /// [dropDownItems] : Drop down options
+    /// [fieldTitle] : Form label title, displayed inline with border
+    /// [prefixIcon] : Icon displayed within form field bounds
+    /// [icon] : Icon Displayed before inline with the form field, outside of bounds
+    /// [onSaved] : Returns a string value when form is saved
+    /// [validator] : Validator used for validating input
+    /// [initialValue] : Starting value, must be included in drop down items
+    /// [autovalidate] : Whether the input should be validated after any change
+
+    DropDownFormField({
         @required List<T> dropDownValues,
         String fieldTitle,
         Icon prefixIcon,

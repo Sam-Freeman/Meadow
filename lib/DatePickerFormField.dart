@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:intl/intl.dart';
 
-/// An input field which displays a calendar pop up
-/// 
-/// [fieldTitle] : The title, displayed in line with border
-/// [initialValue] : The initial selected date, defaults to current date if none provided
-/// [endDate] : The furthest FUTURE date that can be selected, defaults to current date if none provided
-/// [firstDate] : The furthest PAST date that can be selected, defaults to December 1998 if none provided 
-/// [onSaved] : Returns a string value when form is saved
-/// [validator] : Validator used for validating input
-/// [initialValue] : Starting value, must be included in drop down items
-/// [autovalidate] : Whether the input should be validated after any change
 class DateFormField extends FormField<DateTime> {
+    /// An input field which displays a calendar pop up
+    /// 
+    /// [fieldTitle] : The title, displayed in line with border
+    /// [initialValue] : The initial selected date, defaults to current date if none provided
+    /// [endDate] : The furthest FUTURE date that can be selected, defaults to current date if none provided
+    /// [firstDate] : The furthest PAST date that can be selected, defaults to December 1998 if none provided 
+    /// [onSaved] : Returns a string value when form is saved
+    /// [validator] : Validator used for validating input
+    /// [initialValue] : Starting value, must be included in drop down items
+    /// [autovalidate] : Whether the input should be validated after any change
+
     final DateTime initialValue;
 
     DateFormField({
