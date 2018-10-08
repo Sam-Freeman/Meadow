@@ -1,6 +1,6 @@
 # meadow
 
-A selection of easy to use form field widgets within Flutter:
+A selection of easy to use form field widgets to be used within Flutter forms:
 * Row of Buttons
 * Date Picker
 * Drop Down List
