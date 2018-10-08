@@ -1,6 +1,6 @@
 name: meadow
 description: Provides a selection of easy-to-use form field widgets to be used within a Flutter form
-version: 0.0.2
+version: 0.1.0
 author: Samuel Freeman <freeman@easesoftware.co.uk>
 homepage: https://github.com/Sam-Freeman/Meadow
 publish_to: https://pub.dartlang.org

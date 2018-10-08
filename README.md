@@ -16,7 +16,7 @@ For help on editing package code, view the [documentation](https://flutter.io/de
 
 ## Example
 
-An example form can be found in this package in the class "example.dart"
+There is an example that demonstrates an example use of each form field widget in the example project
 
-![](https://imgur.com/a/9miJ93a)
+![](https://imgur.com/a/9miJ93a) https://imgur.com/a/9miJ93a
 

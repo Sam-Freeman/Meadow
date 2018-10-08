@@ -5,18 +5,12 @@ class ExampleMeadowFormPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-         minimum: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.025),
-         child: SizedBox(
-           width: MediaQuery.of(context).size.width * 0.95,
-           child: ListView(
-             children: [
-               ExampleMeadowForm()
-             ]
-           )
-         )
-      )
-    );
+        body: SafeArea(
+            minimum: EdgeInsets.only(
+                left: MediaQuery.of(context).size.width * 0.025),
+            child: SizedBox(
+                width: MediaQuery.of(context).size.width * 0.95,
+                child: ListView(children: [ExampleMeadowForm()]))));
   }
 }
 
@@ -30,15 +24,29 @@ class _ExampleModel {
   bool mCheckBox;
 
   @override
-    String toString() {
-      return "Two Button String: " + mButtonRowTwoString + ", "
-        "Two Button Int: " + mButtonRowTwoInt.toString() + ", "
-        "Three Button: " + mButtonRowThree + ", "
-        "Radio: " + mRadio + ", "
-        "Date: " + mDatePicker.toString() + ", "
-        "Switch: " + mSwitch.toString() + ", "
-        "Check Box: " + mCheckBox.toString() + ", ";
-    }
+  String toString() {
+    return "Two Button String: " +
+        mButtonRowTwoString +
+        ", "
+        "Two Button Int: " +
+        mButtonRowTwoInt.toString() +
+        ", "
+        "Three Button: " +
+        mButtonRowThree +
+        ", "
+        "Radio: " +
+        mRadio +
+        ", "
+        "Date: " +
+        mDatePicker.toString() +
+        ", "
+        "Switch: " +
+        mSwitch.toString() +
+        ", "
+        "Check Box: " +
+        mCheckBox.toString() +
+        ", ";
+  }
 }
 
 class ExampleMeadowForm extends StatefulWidget {
@@ -47,7 +55,6 @@ class ExampleMeadowForm extends StatefulWidget {
 }
 
 class _ExampleMeadowFormState extends State<ExampleMeadowForm> {
-
   final _formKey = GlobalKey<FormState>();
   final TextStyle _style = TextStyle(fontSize: 14.0, letterSpacing: 1.4);
   final _ExampleModel _formData = _ExampleModel();
@@ -55,15 +62,15 @@ class _ExampleMeadowFormState extends State<ExampleMeadowForm> {
   void _submitForm() {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
-      Scaffold.of(context).showSnackBar(SnackBar(content: Text(_formData.toString())));
+      Scaffold.of(context)
+          .showSnackBar(SnackBar(content: Text(_formData.toString())));
     }
   }
 
   Widget _header(String text) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 20.0),
-      child: Text(text, style: _style)
-    );
+        padding: EdgeInsets.symmetric(vertical: 20.0),
+        child: Text(text, style: _style));
   }
 
   @override
@@ -102,7 +109,8 @@ class _ExampleMeadowFormState extends State<ExampleMeadowForm> {
           ),
           _header("Radio Buttons"),
           RadioButtonsFormField(
-            rowWidth: _maxWidth, values: ["a", "b"],
+            rowWidth: _maxWidth,
+            values: ["a", "b"],
             onSaved: (value) => _formData.mRadio = value,
           ),
           _header("Date Picker"),
@@ -111,16 +119,20 @@ class _ExampleMeadowFormState extends State<ExampleMeadowForm> {
             onSaved: (value) => _formData.mDatePicker = value,
           ),
           _header("Switch"),
-          SwitchFormField(title: Text("This is a Switch"), onSaved: (value) => _formData.mSwitch = value),
+          SwitchFormField(
+              title: Text("This is a Switch"),
+              onSaved: (value) => _formData.mSwitch = value),
           _header("Checkbox"),
-          CheckBoxFormField(title: Text("This is a Checkbox "), onSaved: (value) => _formData.mCheckBox = value),
+          CheckBoxFormField(
+              title: Text("This is a Checkbox "),
+              onSaved: (value) => _formData.mCheckBox = value),
           SizedBox(height: 20.0),
           FlatButton(
             child: Text("Submit"),
-            onPressed:() => _submitForm(),
+            onPressed: () => _submitForm(),
           )
         ],
-      ), 
+      ),
     );
   }
 }
