@@ -1,6 +1,6 @@
 # meadow
 
-Meadow is a flutter package that contains a selection of easy to use form field widgets:
+A selection of easy to use form field widgets within Flutter:
 * Row of Buttons
 * Date Picker
 * Drop Down List
